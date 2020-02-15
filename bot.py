@@ -9,10 +9,10 @@ number = ''
 def start(message):
 	if message.text == '/geometry':
 		bot.send_message(message.from_user.id, "Хорошо! Теберь выбери номер (1-448)")
-		bot.register_next_step_handler(message, get_num_geom) #следующий шаг – функция get_name
+		bot.register_next_step_handler(message, get_num_geom) #следующий шаг – функция get_num_geom
 	elif message.text == '/algebra':
 		bot.send_message(message.from_user.id, "Хорошо! Теберь выбери главу (1-3)")
-		bot.register_next_step_handler(message, get_glava_alg) #следующий шаг – функция get_name
+		bot.register_next_step_handler(message, get_glava_alg) #следующий шаг – функция get_glava_alg
 	else:
 		bot.send_message(message.from_user.id, 'Напиши /geometry или /algebra !')
 
